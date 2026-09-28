@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  postgres:
+    # Swap for `timescale/timescaledb:2.15.0-pg16` and add a
+    # `SELECT create_hypertable('sensor_readings', 'timestamp');`
+    # migration if reading volume ever grows enough to need it.
+    image: postgres:16
+    container_name: pm_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: predictive_maintenance
+      POSTGRES_USER: pm_user
+      POSTGRES_PASSWORD: pm_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pm_pgdata:/var/lib/postgresql/data
+
+volumes:
+  pm_pgdata:
