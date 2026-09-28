@@ -1,6 +1,6 @@
 # Predictive Maintenance System
 
-End-to-end machine learning system that predicts industrial equipment failures from multi-sensor time series data, serves predictions through a REST API, and gives operations teams a live fleet dashboard with configurable alerts.
+End-to-end machine learning system that predicts industrial equipment failures from multi-sensor time series data, serves predictions through a FastAPI, and gives operations teams a live fleet dashboard with configurable alerts.
 
 ## Problem
 
