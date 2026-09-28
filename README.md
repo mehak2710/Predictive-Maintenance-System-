@@ -77,8 +77,6 @@ Evaluated on **held-out machines** (the train/test split is by machine, not by r
 | Failure-window classifier, ROC AUC | 0.999 |
 | Failure-window classifier, precision / recall | 0.85 / 0.99 |
 
-**Reading these honestly:** the classifier scores are near-perfect because synthetic degradation is cleanly separable, so they would not carry over to real equipment. The RUL error of about 35 cycles is the more realistic figure. The recall of 0.99 with lower precision reflects the class weighting: the model is tuned to miss few failures at the cost of some false alarms, which is the right trade-off for maintenance.
-
 ## Alert logic
 
 | State | Condition |
